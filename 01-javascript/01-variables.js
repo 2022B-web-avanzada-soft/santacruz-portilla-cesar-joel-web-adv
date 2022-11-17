@@ -36,3 +36,15 @@ console.log(typeof zapatos);
 // cd 01-javascript
 // Run command
 // node 01-variables.js
+
+// truty / falsy
+if (""){
+    console.log("String vacio es verdadero");
+} else {
+    console.log("String vacio es Falsy");
+}
+if("Cesar"){
+    console.log("String con texto es truty");
+} else {
+    console.log("String con texto es falso");
+}
