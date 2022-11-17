@@ -48,3 +48,104 @@ if("Cesar"){
 } else {
     console.log("String con texto es falso");
 }
+if(-1){
+    console.log("Numero negativo es truty");
+}else{
+    console.log("Numero negativo es falso");
+}
+if(0){
+    console.log("Numero cero es truty");
+}else{
+    console.log("Numero cero es falso");
+}
+if(1){
+    console.log("Numero positivo es truty");
+} else {
+    console.log("Numero positivo es falso");
+}
+if(null){
+    console.log("Null es truty");
+} else {
+    console.log("Null es falso");
+}
+if(undefined){
+    console.log("Undefined es truty");
+} else {
+    console.log("Undefined es falso");
+}
+
+// Orden de importancia
+// 1) const
+// 2) let
+// 3) x -> var
+
+const cesar = {
+    "nombre": "Cesar",
+    'apellido': 'Santacruz',
+    edad: 22,
+    hijos: null,
+    zapatos: undefined,
+    casado: false,
+    ropa: {
+        color: 'rojo',
+        talla: 'M',
+    },
+    mascotas: ['Pelusa', 'Arthur'],
+}
+console.log(cesar);
+
+// Acceder a las propiedades del objeto
+console.log(cesar.nombre);
+console.log(cesar.apellido);
+console.log(cesar['nombre']);
+
+// Cambiar valores
+cesar.nombre = 'Joel';
+cesar['nombre'] = 'Joel';
+
+// Crear nuevos atributos o metodos dentro del objeto
+cesar.sueldo;
+console.log(cesar.sueldo);
+cesar.sueldo = 1.2;
+console.log(cesar.sueldo);
+cesar['gastos'] = 0.8;
+console.log(cesar.gastos);
+console.log(cesar);
+
+// Borrar el valor de un atributo
+cesar.nombre = undefined;
+console.log(cesar);
+console.log(Object.keys(cesar));
+console.log(Object.values(cesar));
+
+// Borrar un atributo
+delete cesar.nombre;
+console.log(Object.keys(cesar));
+console.log(cesar);
+
+// Variables por valor o referencia?
+// Variables por valor en JS son primitivas: number, string, boolean, null, undefined
+let edadCesar = 22;
+let edadJoel = edadCesar; // Guardamos una primitive en otra variable (Variables por valor)
+console.log(edadCesar);
+console.log(edadJoel);
+edadCesar = edadCesar + 1;
+console.log(edadCesar);
+console.log(edadJoel);
+
+// Variables por referencia
+// Solo estamos creando una referencia (un puntero) a la direccion de memoria donde está el objeto notas
+let notas = {
+    total: 10,
+};
+let notasSegundoBimestre = notas;
+notasSegundoBimestre.total = notasSegundoBimestre.total + 1;
+console.log('Notas', notas);
+console.log('Notas segundo bimestre', notasSegundoBimestre);
+// Como clonar objetos
+let notasTercerBimestre = Object.assign({}, notas);
+// Object.assign(target, source)
+notasTercerBimestre.total = notasTercerBimestre.total + 1;
+console.log('Notas', notas);
+console.log('Notas segundo bimestre', notasSegundoBimestre);
+console.log('Notas tercer bimestre', notasTercerBimestre);
