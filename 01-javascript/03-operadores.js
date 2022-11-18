@@ -133,3 +133,56 @@ const respuestaEvery = arreglo.every(
     }
 );
 console.log('respuestaEvery', respuestaEvery);
+
+// reduce (Devuelve un valor)
+// reduce izq -> der
+// reduceRight der -> izq
+// [1,2,3, 5, 6, 5, 4, 3, 1]
+// 0 -> variable inicial
+// 0 + 1
+// 1 + 2
+// 3 + 3
+// 6 + 5
+const respuestaReduce = arreglo.reduce(
+    function (valorAcumulado, valorActual, indiceActual, arregloCompleto){
+        return valorAcumulado + valorActual.nota;
+    },
+    0 // Valor inicial
+);
+console.log('respuestaReduce', respuestaReduce / arreglo.length);
+
+// sort (Ordenar el arreglo)
+// Devuelve un nuevo arreglo
+const respuestaSort = arreglo.sort(
+    function (valorActual, valorActual2){
+        return valorActual.nota - valorActual2.nota;
+    },
+);
+console.log('respuestaSort', respuestaSort);
+
+// reverse (Invertir el arreglo)
+// Devuelve un nuevo arreglo
+const respuestaReverse = arreglo.reverse();
+console.log('respuestaReverse', respuestaReverse);
+
+// splice (Eliminar elementos)
+// Devuelve un nuevo arreglo
+const respuestaSplice = arreglo.splice(1, 3);
+console.log('respuestaSplice', respuestaSplice);
+
+// slice (Extraer elementos)
+// Devuelve un nuevo arreglo
+const respuestaSlice = arreglo.slice(1, 3);
+console.log('respuestaSlice', respuestaSlice);
+
+// join (Unir elementos)
+// Devuelve un string
+const respuestaJoin = arreglo.join(' - ');
+console.log('respuestaJoin', respuestaJoin);
+
+// Concatenar operadores
+// Devuelve un nuevo arreglo
+const respuestaConcatenarOperadores = arreglo.filter((a) => a.nota >= 14)
+    .map((b) => b.nota)
+    .some((c) => c > 14);
+console.log('respuestaConcatenarOperadores', respuestaConcatenarOperadores);
