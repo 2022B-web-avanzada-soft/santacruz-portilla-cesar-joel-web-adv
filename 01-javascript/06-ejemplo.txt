@@ -1,0 +1,2 @@
+Hola soy el archivo 06-ejemplo.txt
+
