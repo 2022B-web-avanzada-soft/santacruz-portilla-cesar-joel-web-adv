@@ -15,7 +15,7 @@ function promesaEsPar(numero) { // f -> Promesa
 function promesaElevarAlCuadrado(numero) {
     return new Promise((res)=> res(Math.pow(numero, 2)));
 }
-promesaEsPar(5)
+promesaEsPar(4)
     .then( // try
         (data)=>{
             console.log('DATA', data);
