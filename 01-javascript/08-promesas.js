@@ -43,16 +43,48 @@ function ejercicio08(path, contenidoArchivo) {
         .then((contenidoActual)=>{
             return escribirArchivo(path, contenidoActual + contenidoArchivo)
         })
+        .catch((error)=>{
+            return escribirArchivo(path, contenidoArchivo)
+        }
+        )
 }
 
-ejercicio08('./06-ejemplo.txt', ' Esto esta funcionando')
-    .then(
-        (contenidoArchivo)=>{
-            console.log('Contenido archivo', contenidoArchivo);
-        }
-    )
-    .catch(
-        (error)=>{
-            console.error('Error', error);
-        }
-    )
+// ejercicio08('./06-ejemplo.txt', ' Esto esta funcionando')
+//     .then(
+//         (contenidoArchivo)=>{
+//             console.log('Contenido archivo', contenidoArchivo);
+//         }
+//     )
+//     .catch(
+//         (error)=>{
+//             console.error('Error', error);
+//         }
+//     )
+
+// ASYNC AWAIT
+// Reglas:
+// 1) Debe estar dentro de una funcion (nombrada o anonima)
+// 2) Agregar la palabra 'async' antes de la declaracion de la funcion
+// 3) Agregar la palabra 'await' antes de la declaracion de la promesa
+async function asyncAwaitUno(path, nuevoContenido) {
+    // Si sabemos que en la promesa puede haber un reject usamos try catch
+    try{
+        const respuestaContenidoArchivo = await leerArchivo(path);
+        console.log('Contenido archivo', respuestaContenidoArchivo);
+        await escribirArchivo(path, respuestaContenidoArchivo + nuevoContenido);
+        // leerArchivo(path) // async queda siempre para el final
+    } catch (e) {
+        console.error('Error', e);
+    }
+}
+
+const asyncAwaitDos = async function () {
+
+}
+
+const asyncAwaitTres = async () => {
+
+}
+asyncAwaitUno('./06-ejemplo.txt', ' Esto esta funcionando async await').then(r => console.log(r));
+
+
