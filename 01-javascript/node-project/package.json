@@ -4,7 +4,7 @@
   "description": "",
   "main": "09-inquirer.js",
   "dependencies": {
-    "inquirer": "^9.1.4"
+    "inquirer": "^8.0.0"
   },
   "devDependencies": {},
   "scripts": {

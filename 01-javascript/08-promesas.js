@@ -87,4 +87,23 @@ const asyncAwaitTres = async () => {
 }
 asyncAwaitUno('./06-ejemplo.txt', ' Esto esta funcionando async await').then(r => console.log(r));
 
+/*
 
+Proyecto (entre 2 personas)
+- Historias de usuario (trello)
+    - Definition of ready
+        - Yo como ROL, quiero XXXXXX para XXXX
+        - Existen varias interpretaciones para esto nos sirve los criterios de aceptacion
+        - Criterios de aceptacion
+            - Debe tener un boton
+            - Debe tener un input
+            - Debe salir en PDF
+        - Discutido
+        - Esfuerzo - Story points
+        - Prioridad
+        - Prototipo
+
+- Modelo Base de datos relacional
+- Prototipos (figma)
+
+ */
