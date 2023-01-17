@@ -8,7 +8,7 @@ export default function () {
 
     useEffect(
         () => {
-            console.log("Cambia en algun lado el nombre")
+            console.log("Cambia en algún lado el nombre")
         },
         [objetoContenedorContext.userName]
     )

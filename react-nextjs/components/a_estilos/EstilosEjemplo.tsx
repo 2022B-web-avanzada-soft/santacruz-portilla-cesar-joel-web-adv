@@ -42,10 +42,10 @@ export default function () {
 
             <div style={misEstilos}>Otros estilos</div>
             <div className={styles.rojo}>
-                Aqui estilos
+                Aquí estilos
             </div>
             <div className={styles.cian}>
-                Aqui estilos cian
+                Aquí estilos cian
             </div>
         </>
     );

@@ -7,9 +7,9 @@ type PropiedadesComponente = {
     mostrar?: boolean;
 };
 export default function (props: PropiedadesComponente) {
-    // Decomposicion de propiedades
+    // De composición de propiedades
     const { url, iteraciones, mostrar } = props;
-    // Automaticamente con esta sintaxis el 1 iria a numeroUno y el 0 con numeroDos
+    // Automáticamente con esta sintaxis el 1 iria a numeroUno y el 0 con numeroDos
     // const arreglo = [1, 0];
     // const numeroUno = arreglo[0];
     // const numeroDos = arreglo[1];

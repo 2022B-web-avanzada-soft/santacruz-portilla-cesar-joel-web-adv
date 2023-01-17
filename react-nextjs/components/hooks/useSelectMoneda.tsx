@@ -10,7 +10,7 @@ export default function (label: string, opciones: MonedasInterface[]) {
     const generarJSXElementMonedas: ()=> JSX.Element[] = () => {
         return opciones.map(
             (moneda: MonedasInterface) =>
-                ( // Iteracion (KEY ES REQUERIDO)
+                ( // Iteración (KEY ES REQUERIDO)
                     <option key={moneda.id} id={moneda.id} value={moneda.id}>
                         {moneda.nombre}
                     </option>
@@ -19,10 +19,10 @@ export default function (label: string, opciones: MonedasInterface[]) {
     }
     /*
     No es nada más que un select, ponemos el valor de la moneda, al comienzo no es nada y abajo generamos las opciones
-    que obtenemos arriba, usamos el label que nos llega como parametro y el onChange que setea el valor de la moneda con
+    que obtenemos arriba, usamos el label que nos llega como parámetro y el onChange que asignamos el valor de la moneda con
     el value que pusimos arriba.
      */
-    const UseSelectMonedas = (
+    const useSelectMonedas = (
         <>
             <label className={"form-label"} htmlFor={label}>{label}</label>
             <select className={"form-select"}
@@ -38,5 +38,5 @@ export default function (label: string, opciones: MonedasInterface[]) {
             </select>
         </>
     )
-    return [moneda, UseSelectMonedas];
+    return [moneda, useSelectMonedas];
 }

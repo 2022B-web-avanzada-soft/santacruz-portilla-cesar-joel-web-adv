@@ -8,7 +8,6 @@ interface User {
     }
 export default function () {
     const [number, setNumber] = useState(0 as number);
-    const [name, setName] = useState("");
     const [numbersArray, setNumbersArray] = useState([1, 2, 3, 4, 5]);
     const [user, setUser] = useState({
         name: "Cesar",
@@ -22,7 +21,7 @@ export default function () {
             console.log("Inicio del componente", number, user);
         },
         [] // arreglo de variables
-            // Si el arreglo esta vacio se ejecuta al principio nuevamente
+            // Si el arreglo está vacío se ejecuta al principio nuevamente
     );
     useEffect(
         () => {
@@ -33,7 +32,7 @@ export default function () {
     );
     useEffect(
         () => {
-            console.log("Cambio del arreglo de numeros", numbersArray);
+            console.log("Cambio del arreglo de números", numbersArray);
         },
         [numbersArray] // arreglo de variables
     );
@@ -48,7 +47,7 @@ export default function () {
         () => {
             console.log("Cambio todo", number, numbersArray, user);
         },
-        [number, numbersArray, user] // Todoo cambia
+        [number, numbersArray, user] // Con cualquier cambio
     );
 
     return (
