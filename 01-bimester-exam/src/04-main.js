@@ -1,9 +1,9 @@
 // src/04-main.js
 import inquirer from 'inquirer';
+import chalk from "chalk";
 import {asyncReadFile, asyncWriteFile, asyncAddToJSON} from "./03-file-management.js";
 import {Country} from "./01-country.js";
 import {City} from "./02-city.js";
-import chalk from "chalk";
 
 const dataPath = './data/all_data.json'
 const mainMenuMessage = chalk.blue.italic('What do you want to do in the country menu?')

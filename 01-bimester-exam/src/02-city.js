@@ -1,7 +1,7 @@
 // src/02-city.js
 import inquirer from 'inquirer';
-import DatePrompt from "inquirer-date-prompt";
 import chalk from "chalk";
+import DatePrompt from "inquirer-date-prompt";
 
 inquirer.registerPrompt("date", DatePrompt);
 
@@ -113,7 +113,7 @@ export class City {
                         return country
                     }
                 )
-                if(!isCityDeleted) {
+                if (!isCityDeleted) {
                     console.log(chalk.redBright.bgYellow('City not found'))
                 }
                 return newCountryCity
