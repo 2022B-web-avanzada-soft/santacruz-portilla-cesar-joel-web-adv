@@ -8,11 +8,11 @@ The objective of this project is to identify the user stories, database model an
 
 ## Content
 
-- [Database (SQL Server)](https://1drv.ms/u/s!Aj6AIBJZ_H9ctZkhcOYYNZ0M3ZyQnQ?e=8HP02g)
+- [Database (SQL Server)](src/zip/1SantacruzSantamariaDB.zip)
 
-- [Prototipe (Adobe XD)](https://1drv.ms/b/s!Aj6AIBJZ_H9ctZkjKpWK1esHxVTDqQ?e=I3nYFW)
+- [Prototipe (Adobe XD)](src/pdf/2SantacruzSantamariaPrototipo.pdf)
 
-- [User Stories (PDF)](https://1drv.ms/b/s!Aj6AIBJZ_H9ctZki6aCTEOLB7izrbQ?e=VsIac3)
+- [User Stories (PDF)](src/pdf/3SantacruzSantamariaUH.pdf)
 
 
 ## DB model
