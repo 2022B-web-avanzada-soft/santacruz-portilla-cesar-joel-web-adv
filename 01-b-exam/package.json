@@ -1,0 +1,22 @@
+{
+  "name": "01-b-exam",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Advanced web applications exam for the first bimester",
+  "exports": {
+    "index": "./src/index.js",
+    "main": "./src/04-main.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start Exam": "node src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "inquirer": "^9.1.4",
+    "inquirer-date-prompt": "^3.0.0"
+  }
+}
