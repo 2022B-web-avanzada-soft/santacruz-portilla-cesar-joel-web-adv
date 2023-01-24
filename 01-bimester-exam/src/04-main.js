@@ -5,7 +5,7 @@ import {asyncReadFile, asyncWriteFile, asyncAddToJSON} from "./03-file-managemen
 import {Country} from "./01-country.js";
 import {City} from "./02-city.js";
 
-const dataPath = './data/all_data.json'
+const dataPath = './data/json/all_data.json'
 const mainMenuMessage = chalk.blue.italic('What do you want to do in the country menu?')
 const mainMenuOptions = [
     'Add new country',

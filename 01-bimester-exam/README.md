@@ -20,7 +20,7 @@ The assignment is delivered with a video (Create, Read, Update, Delete) and the 
 
 - [Código (GitHub)](https://github.com/2022B-web-avanzada-soft/santacruz-portilla-cesar-joel-web-adv/tree/main/01-bimester-exam)
 
-- [Video (Youtube)](https://1drv.ms/b/s!Aj6AIBJZ_H9ctZkjKpWK1esHxVTDqQ?e=I3nYFW)
+- [Video (Youtube)](https://youtu.be/ljgiw6kIUKw)
 
 ## [Documentation](#documentation)
 
