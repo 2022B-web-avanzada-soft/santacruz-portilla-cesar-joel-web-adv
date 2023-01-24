@@ -5,7 +5,7 @@ import {Country} from "./01-country.js";
 import {City} from "./02-city.js";
 import chalk from "chalk";
 
-const dataPath = './data/registro.json'
+const dataPath = './data/all_data.json'
 const mainMenuMessage = chalk.blue.italic('What do you want to do in the country menu?')
 const mainMenuOptions = [
     'Add new country',
@@ -180,9 +180,9 @@ function mainManageCities() {
                  * @param {number} countryIndex
                  */
                 countryIndex => {
-                    if(countryIndex !== -1){
+                    if (countryIndex !== -1) {
                         cityManagement(countryIndex, countryList);
-                    }else{
+                    } else {
                         console.log(chalk.magenta.bgCyan("There are no countries with that name"))
                         main()
                     }
@@ -320,9 +320,9 @@ function cityManagementUpdateCity(countryIndex, countryList) {
  * @param {Array} countryList
  */
 function cityManagementShowAllCities(countryIndex, countryList) {
-    if(countryList[countryIndex].visitedCities.length > 0){
+    if (countryList[countryIndex].visitedCities.length > 0) {
         City.printCity(countryList[countryIndex].visitedCities)
-    }else{
+    } else {
         console.log(chalk.magenta.bgCyan("There are no cities in this country"))
     }
     cityManagement(countryIndex, countryList)
