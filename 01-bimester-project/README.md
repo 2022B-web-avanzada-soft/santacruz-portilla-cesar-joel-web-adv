@@ -25,7 +25,7 @@ The objective of this project is to identify the user stories, database model an
 
 ## Authors
 
-- [@cesarsant2000](https://www.github.com/octokatherine)
+- [@CesarSant2000](https://github.com/CesarSant2000)
 
 - [@Lizbeth-Santamaria](https://github.com/Lizbeth-Santamaria)
 
