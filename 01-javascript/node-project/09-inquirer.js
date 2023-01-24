@@ -13,12 +13,12 @@ async function main() {
                 {
                     type: 'input',
                     name: 'nombre',
-                    message: 'Ingresa tu nombre'
+                    message: 'Ingresa tu name'
                 },
                 {
                     type: 'input',
                     name: 'edad',
-                    message: 'Ingresa tu edad'
+                    message: 'Ingresa tu lastVisitDate'
                 }
             ]);
         console.log('Respuesta', respuesta);

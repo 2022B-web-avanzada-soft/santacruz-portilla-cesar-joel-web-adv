@@ -9,7 +9,7 @@ let nombre2: String = 'Cesar2'; // Clase String
 // tsc 01-variables.ts --target es3
 // tsc 01-variables.ts --target es6
 
-// nombre = 1;
+// name = 1;
 let edad: number = 32;
 let casado: boolean = false;
 let fecha: Date = new Date()

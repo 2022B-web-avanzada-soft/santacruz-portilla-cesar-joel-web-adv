@@ -72,7 +72,7 @@ async function asyncAwaitUno(path, nuevoContenido) {
         const respuestaContenidoArchivo = await leerArchivo(path);
         console.log('Contenido archivo', respuestaContenidoArchivo);
         await escribirArchivo(path, respuestaContenidoArchivo + nuevoContenido);
-        // leerArchivo(path) // async queda siempre para el final
+        // asyncReadFile(path) // async queda siempre para el final
     } catch (e) {
         console.error('Error', e);
     }
@@ -124,7 +124,7 @@ Ingrediente N
 5 datos
 Toda la informacion se va a guardar en archivos, si cierro o abro el programa la informacion debe seguir estando.
 Vamos a usar inquirer
-Mi tema es Pais, Ciudad
+Mi tema es Country, Ciudad
 Examen 24 de enero.
 Subir video, entidades usadas, ejecucion, operaciones crud, cerrar volver a abrir y que siga funcionando.
 

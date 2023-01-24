@@ -82,9 +82,9 @@ if(undefined){
 // 3) x -> var
 
 const cesar = {
-    "nombre": "Cesar",
+    "name": "Cesar",
     'apellido': 'Santacruz',
-    edad: 22,
+    lastVisitDate: 22,
     hijos: null,
     zapatos: undefined,
     casado: false,
@@ -97,13 +97,13 @@ const cesar = {
 console.log(cesar);
 
 // Acceder a las propiedades del objeto
-console.log(cesar.nombre);
+console.log(cesar.name);
 console.log(cesar.apellido);
-console.log(cesar['nombre']);
+console.log(cesar['name']);
 
 // Cambiar valores
-cesar.nombre = 'Joel';
-cesar['nombre'] = 'Joel';
+cesar.name = 'Joel';
+cesar['name'] = 'Joel';
 
 // Crear nuevos atributos o metodos dentro del objeto
 cesar.sueldo;
@@ -115,13 +115,13 @@ console.log(cesar.gastos);
 console.log(cesar);
 
 // Borrar el valor de un atributo
-cesar.nombre = undefined;
+cesar.name = undefined;
 console.log(cesar);
 console.log(Object.keys(cesar));
 console.log(Object.values(cesar));
 
 // Borrar un atributo
-delete cesar.nombre;
+delete cesar.name;
 console.log(Object.keys(cesar));
 console.log(cesar);
 

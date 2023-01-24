@@ -6,7 +6,7 @@ export default function () {
     const contenedorContext = useContext(ContenedorContext)
     useEffect(
         () => {
-            console.log("Cambia en algún lado el nombre", contenedorContext.userName)
+            console.log("Cambia en algún lado el name", contenedorContext.userName)
         },
         [contenedorContext.userName]
     )
