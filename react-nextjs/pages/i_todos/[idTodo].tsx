@@ -1,14 +1,25 @@
 // pages/i_todos/[idTodo].tsx
 import Layout from "../../components/Layout";
 import {GetStaticPaths, GetStaticProps} from "next";
-import {TodoHttp} from "../../services/http/todo.http";
+import {Todo, TodoHttp} from "../../services/http/todo.http";
+import {useRouter} from "next/router";
 
-export default function () {
+// http://localhost:3000/i_todos/1?nombre=cesar // idTodo = 1; nombre = cesar;
+export default function (params: ParametersTodo) {
+    const router = useRouter();
+    const {idTodo, nombre} = router.query;
+    console.log('idTodo', idTodo);
+    console.log('nombre', nombre);
     return (
         <Layout title="To do's">
-            <h1>To do's hijo</h1>
+            <h1>To do's hijo {params?.todo.title}</h1>
         </Layout>
     )
+}
+
+interface ParametersTodo {
+        error?: string;
+        todo?: Todo;
 }
 
 //Check the valid ids
@@ -17,7 +28,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
         {params: {idTodo: '1'}},
         {params: {idTodo: '2'}},
         {params: {idTodo: '4'}},
-        ]
+    ]
     return {paths, fallback: false}
 }
 
@@ -36,6 +47,6 @@ export const getStaticProps: GetStaticProps = async (
     }
 }
 
-// Servidor (nextjs front-end)
+// Servidor (next js front-end)
 
 // Servidor Back-end (Content Management System - CMS)
