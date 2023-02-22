@@ -3,7 +3,7 @@ import {ConnectedSocket, MessageBody, SubscribeMessage, WebSocketGateway} from "
 import {Server, Socket} from "socket.io";
 
 @WebSocketGateway(
-    8080, // Port where the server will be listening
+    21205, // Port where the server will be listening
     {
         cors: {
             origin: '*', // Origin allowed to connect
