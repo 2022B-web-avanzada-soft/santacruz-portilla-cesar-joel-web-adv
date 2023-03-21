@@ -66,3 +66,4 @@ export class GatewayEvents {
         return {message: 'ok'}; // Callback from the method.s
     }
 }
+

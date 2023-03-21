@@ -47,22 +47,23 @@ export default function () {
                 setMessage((prevMessages) => [...prevMessages, newMessage]);
             });
             socket.on('listenEnterRoomEvent', (data: { message: string }) => {
-                console.log('listenEnterRoomEvent', data);
                 const newMessage: chatMessageProps = {
                     message: data.message,
                     name: 'Server',
                     position: 'L'
                 }
                 setMessage((prevMessages) => [...prevMessages, newMessage]);
+                console.log('listenEnterRoomEvent', data);
             });
-            socket.on('listenSendMessageEvent', (data: { message: string }) => {
+            socket.on('listenSendMessageEvent', (data: RoomMessage) => {
                 console.log('listenSendMessageEvent', data);
                 const newMessage: chatMessageProps = {
-                    message: data.message,
-                    name: 'Server',
+                    message: data.roomId + ' - ' + data.message,
+                    name: data.name,
                     position: 'L'
                 }
                 setMessage((prevMessages) => [...prevMessages, newMessage]);
+                console.log('listenSendMessageEvent', data);
             });
         }, []
     )
@@ -153,14 +154,14 @@ export default function () {
                                                className="form-control"
                                                placeholder="EJ: 1234"
                                                id="salaId"
-                                               {...register('roomId', {required: 'Ingresar salaId'})}
-                                               aria-describedby="salaIdHelp"/>
-                                        <div id="salaIdHelp" className="form-text">
-                                            Ingresa tu idSala.
+                                               {...register('roomId', {required: 'Enter the Room ID'})}
+                                               aria-describedby="roomIdHelp"/>
+                                        <div id="roomIdHelp" className="form-text">
+                                            Enter the Room ID
                                         </div>
                                         {errors.roomId &&
                                             <div className="alert alert-warning" role="alert">
-                                                Tiene errores {errors.roomId.message}
+                                                There are some errors: {errors.roomId.message}
                                             </div>
                                         }
                                     </div>
@@ -168,7 +169,7 @@ export default function () {
                                         <label htmlFor="nombre" className="form-label">Nombre</label>
                                         <input type="text"
                                                className="form-control"
-                                               placeholder="EJ: Lizbeth"
+                                               placeholder="EJ: Cesar"
                                                id="nombre"
                                                {...register('name', {required: 'Nombre requerido'})}
                                                aria-describedby="nombreHelp"/>
